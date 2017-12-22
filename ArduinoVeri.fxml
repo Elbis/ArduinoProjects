@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="482.0" prefWidth="531.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="arduinoradar.ArduinoVeriController">
+  <children>
+    <Button layoutX="171.0" layoutY="410.0" mnemonicParsing="false" onAction="#connectPort" prefHeight="35.0" prefWidth="189.0" text="BAĞLAN" />
+    <Label fx:id="lb_connect" layoutX="182.0" layoutY="53.0" prefHeight="27.0" prefWidth="205.0" text="BAĞLANTI DURUMU">
+      <font>
+        <Font size="18.0" />
+      </font>
+    </Label>
+    <ComboBox fx:id="cb_port" layoutX="206.0" layoutY="376.0" prefHeight="21.0" prefWidth="120.0" promptText="PORT SEÇİNİZ">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label id="label_veriAl" fx:id="label_mesafeAl" layoutX="64.0" layoutY="331.0" prefHeight="104.0" prefWidth="132.0" text="54">
+      <font>
+        <Font size="48.0" fx:id="x2" />
+      </font>
+    </Label>
+    <Label layoutX="25.0" layoutY="308.0" prefHeight="47.0" prefWidth="132.0" text="MESAFE">
+      <font>
+        <Font size="35.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="405.0" layoutY="307.0" prefHeight="47.0" prefWidth="120.0" text="IŞIK" />
+    <Label id="label_veriAl" fx:id="label_isikAl" font="$x2" layoutX="405.0" layoutY="331.0" prefHeight="104.0" prefWidth="132.0" text="54" />
+    <TableView fx:id="tablo_mesafe" layoutX="14.0" layoutY="29.0" prefHeight="213.0" prefWidth="153.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="54.0" text="Mesafe" fx:id="tc_mesafe" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="113.0" text="Tarih" fx:id="mesafeZaman" />
+      </columns>
+    </TableView>
+    <Button layoutX="14.0" layoutY="259.0" mnemonicParsing="false" onAction="#btn_mesafe" prefWidth="153.0" text="MESAFE KAYDET" />
+    <Button layoutX="365.0" layoutY="259.0" mnemonicParsing="false" onAction="#btn_isik" prefWidth="153.0" text="IŞIK KAYDET" />
+    <TableView fx:id="tablo_isik" layoutX="365.0" layoutY="28.0" prefHeight="213.0" prefWidth="153.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="60.0" text="Işık" fx:id="tc_isik" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Tarih" fx:id="tc_isiktarih" />
+      </columns>
+    </TableView>
+    <Button layoutX="181.0" layoutY="206.0" mnemonicParsing="false" onAction="#btn_yenile" text="YENİLE" />
+    <Button layoutX="299.0" layoutY="206.0" mnemonicParsing="false" onAction="#btn_isikYenile" text="YENİLE" />
+    <ToggleButton fx:id="tb_baglanti" blendMode="GREEN" disable="true" layoutX="181.0" layoutY="98.0" mnemonicParsing="false" opacity="1.0" prefHeight="35.0" prefWidth="175.0" selected="true" text="AÇIK">
+      <font>
+        <Font size="20.0" fx:id="x3" />
+      </font>
+    </ToggleButton>
+    <ToggleButton fx:id="tb_baglanmadi" blendMode="DIFFERENCE" disable="true" font="$x3" layoutX="182.0" layoutY="98.0" mnemonicParsing="false" opacity="1.0" prefHeight="35.0" prefWidth="175.0" selected="false" text="KAPALI" textFill="BLACK" />
+  </children>
+</AnchorPane>

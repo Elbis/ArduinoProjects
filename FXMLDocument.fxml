@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="166.0" prefWidth="342.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="arduinoradar.FXMLDocumentController">
+  <children>
+    <TextField fx:id="tf_user" layoutX="112.0" layoutY="33.0" prefWidth="200.0" text="" />
+    <PasswordField fx:id="tf_pw" layoutX="112.0" layoutY="72.0" prefWidth="200.0" text="" />
+    <Button layoutX="112.0" layoutY="104.0" mnemonicParsing="false" onAction="#Login" prefHeight="34.0" prefWidth="200.0" text="GİRİŞ YAP" />
+    <Label layoutX="14.0" layoutY="36.0" text="Kullanıcı Adı:" />
+    <Label layoutX="14.0" layoutY="72.0" text="Şifre:" />
+  </children>
+</AnchorPane>
